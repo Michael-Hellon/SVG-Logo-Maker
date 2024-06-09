@@ -1,6 +1,6 @@
-const inquirer = require('inquirer');
-const fs = require('fs')
-import { Triangle, Circle, Square} from './lib/shapes.js';
+const inquirer = require("inquirer");
+const fs = require("fs");
+const { Triangle, Square, Circle } = require('./lib/shapes.js');
 
 const questions = [
   {
@@ -26,7 +26,7 @@ const questions = [
   },
 ]
 
-function writeToFile(fileName, answers) {
+function writeToFile(answers) {
   let svgLogo = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${shapeColor}_${shape}_${textColor}_${text} </svg>`;
   let chosenShape;  
   switch (shapeChoice) {
@@ -45,8 +45,7 @@ function writeToFile(fileName, answers) {
 
 
 function questionUser() {
-  inquirer
-    .promise(questions)
+  promise(questions)
 
     .then((answers) => {
         // checks that text is not more than 3 characters
