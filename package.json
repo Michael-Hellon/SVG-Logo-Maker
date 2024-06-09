@@ -3,20 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^29.5.0"
-  },
+  "license": "MIT",
   "dependencies": {
-    "inquirer": "^9.2.23"
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
   }
 }
