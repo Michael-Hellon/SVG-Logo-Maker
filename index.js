@@ -35,14 +35,12 @@ function writeToFile(fileName, answers) {
         svgLogo +=`<polygon points="150, 20 223, 182 56, 182" fill="${answers.color}">`
       case 'Square':
         chosenShape = new Square();
-        svgLogo +=`<circle cx="150" cy="100" r="80" fill="${answers.color}">`
+        svgLogo +=`<rect x="10" y="10" width="200" height="200" fill="${answers.color}">`
       case 'Circle':
         chosenShape = new Circle();
-        svgLogo +=`<rect x="10" y="10" width="200" height="200" fill="${answers.color}">`
+        svgLogo +=`<circle cx="150" cy="100" r="80" fill="${answers.color}">`
   }
   svgLogo +=  `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${answers.textColor}"."${answers.text}"  `
-
-
 }
 
 
@@ -56,8 +54,12 @@ function questionUser() {
           console.log('Error! Enter 3 characters at most!')
           prompt(questions)
         } else {
-            writeToFile("logo.svg", answers)
+          writeToFile("logo.svg", svgLogo, (err) => {
+            err ? console.log(err) : console.log("Your new logo.svg has been created!!!")
+          });
         };
-      });
-}
+    });
+};
+
+questionUser();
 
