@@ -24,11 +24,11 @@ function writeToFile(fileName, answers) {
       break;
     case 'Circle':
       svgShape = new Circle();
-      svgLogo += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
+      svgLogo += `<circle cx="150" cy="100" r="80" fill="${answers.shapeColor}"/>`;
       break;
   }
   
-  svgLogo += `<text x="150" y="130" font-size="50" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
+  svgLogo += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
 
   svgLogo += '</g>';
   svgLogo += '</svg>';
