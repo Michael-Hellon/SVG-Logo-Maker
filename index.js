@@ -10,14 +10,13 @@ function writeToFile(fileName, answers) {
   svgLogo = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
   svgLogo += '<g>';
 
-  console.log('answers.shape:', answers.shape)
   svgLogo += `${answers.shape}`;
 
   let svgShape;
   switch (chosenShape) {
     case 'Triangle':
       svgShape = new Triangle();
-      svgLogo += `<polygon points="150,20 223,182 56,182" fill="${answers.shapeColor}"/>`;
+      svgLogo += `<polygon points="150,10 270,180 30,180" fill="${answers.shapeColor}"/>`;
       break;
     case 'Square':
       svgShape = new Square();
@@ -25,11 +24,11 @@ function writeToFile(fileName, answers) {
       break;
     case 'Circle':
       svgShape = new Circle();
-      svgLogo += `<circle cx="200" cy="200" r="80" fill="${answers.shapeColor}"/>`;
+      svgLogo += `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
       break;
   }
   
-  svgLogo += `<text x="150" y="150" font-size="50" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
+  svgLogo += `<text x="150" y="130" font-size="50" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
 
   svgLogo += '</g>';
   svgLogo += '</svg>';
