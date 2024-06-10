@@ -37,7 +37,7 @@ If you would like to contribute to this project, please see below for my contact
 
 Conduct the test, `npm run test`. The test should come back looking like this:
 
-![screenshot](./assets/images/test_screenshot.png)
+![screenshot](./images/test_screenshot.png)
 
 ## Questions
 
@@ -47,7 +47,7 @@ You can email me with any questions at <mwhellon@yahoo.com>
 
 The demo video can be found at <https://youtu.be/B6AWscHJLP8>
 
-![screenshot](./assets/images/SVG%20generation%20screenshot%20.png)
+![screenshot](./images/SVG%20generation%20screenshot%20.png)
 
 ![screenshot](./examples/svg%20logo%20green%20triangle.png)
 
